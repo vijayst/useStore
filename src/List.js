@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useContext } from 'react';
-import StoreContext from './StoreContext';
+import React, { useState, useEffect } from 'react';
+import useStore from './useStore';
 
 export default function List() {
-    const [{ todo }, dispatch] = useContext(StoreContext);
+    const [{ todo }, dispatch] = useStore();
 
     function handleDelete(id) {
         dispatch({

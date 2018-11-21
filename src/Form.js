@@ -1,9 +1,9 @@
-import React, { useState, useContext } from 'react';
-import StoreContext from './StoreContext';
+import React, { useState } from 'react';
+import useStore from './useStore';
 
 export default function Form(props) {
     const [value, setValue] = useState('');
-    const [state, dispatch] = useContext(StoreContext);
+    const [state, dispatch] = useStore();
 
     function handleAdd(e) {
         e.preventDefault();
