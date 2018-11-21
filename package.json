@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "react": "^16.7.0-alpha.2",
+    "react-dom": "^16.7.0-alpha.2",
+    "redux": "^4.0.1"
+  },
+  "name": "usestore",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:vijayst/useStore.git",
+  "author": "vijayst <vijayst@gmail.com>",
+  "license": "MIT"
+}

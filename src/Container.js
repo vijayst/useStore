@@ -1,11 +1,10 @@
-import React, { useReducer } from 'react';
+import React, { useContext } from 'react';
 import Form from './Form';
 import List from './List';
-import './app.css';
-import todoReducer from './todoReducer';
+import StoreContext from './StoreContext';
 
-export default function App(props) {
-    let [items, dispatch] = useReducer(todoReducer, []);
+export default function Container() {
+    let [items, dispatch] = useContext(StoreContext);
 
     function handleAdd(text) {
         dispatch({
@@ -20,7 +19,6 @@ export default function App(props) {
             id
         });
     }
-
 
     return (
         <div className="app">
