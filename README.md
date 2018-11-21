@@ -1,2 +1,2 @@
 # useStore
-Redux like store with in-built thunk and logger
+Redux like store with React Hooks and Context API.
