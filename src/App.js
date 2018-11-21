@@ -4,9 +4,8 @@ import Store from './Store';
 import rootReducer from './rootReducer';
 import Container from './Container';
 
-console.log(rootReducer);
 
-export default function App(props) {
+export default function App() {
     return (
         <Store rootReducer={rootReducer}>
            <Container />
