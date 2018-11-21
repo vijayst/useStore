@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import StoreContext from './StoreContext';
 
 export default function Form(props) {
     const [value, setValue] = useState('');
+    const [state, dispatch] = useContext(StoreContext);
 
     function handleAdd(e) {
         e.preventDefault();
-        props.onAdd(value);
+        dispatch({
+            type: 'ADD_TODO',
+            text: value
+        });
     }
 
     function handleChange(e) {

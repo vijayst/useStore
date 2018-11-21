@@ -1,11 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import StoreContext from './StoreContext';
 
-export default function List(props) {
+export default function List() {
+    const [{ todo }, dispatch] = useContext(StoreContext);
+
+    function handleDelete(id) {
+        dispatch({
+            type: 'DELETE_TODO',
+            id
+        });
+    }
+
     return (
         <div className="list">
-            {props.items.map(item => (
+            {todo.map(item => (
                 <ListItem key={item.id} 
-                    onDelete={props.onDelete.bind(null, item.id)} 
+                    onDelete={handleDelete.bind(null, item.id)} 
                     text={item.text} 
                 />
             ))}
